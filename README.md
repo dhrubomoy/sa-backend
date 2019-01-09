@@ -8,8 +8,9 @@
     ```
     pip install virtualenv
     ```
-- cd into the project folder and create a virtual environment
+- Create a virtual environment
     ```
+    cd sa-backend
     virtualenv env
     ```
 - Activate the environment
@@ -20,7 +21,7 @@
     ```
     pip install -r requirements.txt
     ```
-- Open `twitter_analysis_utils.py` file and replace following lines with your actual consumer key and access token
+- Open the `/src/searched_tweets/utils/twitter_analysis_utils.py` file and replace following lines with your actual consumer key and access token for twitter api
     ```
     consumer_key = 'YOUR CONSUMER KEY'
     consumer_secret = 'YOUR CONSUMER SECRET'
