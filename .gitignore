@@ -1,0 +1,16 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.vscode
+
+__pycache__/
+
+.env
+src/db.sqlite3
+
+# ML Models
+src/files/models/*.hdf5
+
+/env
