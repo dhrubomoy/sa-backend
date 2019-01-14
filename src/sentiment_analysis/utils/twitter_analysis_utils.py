@@ -1,8 +1,8 @@
 import tweepy, json, re, random
-from searched_tweets import models
+from sentiment_analysis import models
 from nltk.tokenize import word_tokenize
-from .sentiment_analysis.textblob_algorithms import NaiveBayesAlg, PatternLibAlg
-from .sentiment_analysis.rnn_model import RnnWord2Vec, RnnGloVe
+from .sentiment_analysis_utils.textblob_algorithms import NaiveBayesAlg, PatternLibAlg
+from .sentiment_analysis_utils.rnn_model import RnnWord2Vec, RnnGloVe
 
 
 class TwitterAnalysisUtil():
@@ -16,10 +16,14 @@ class TwitterAnalysisUtil():
 
     def get_api(self):
         # TODO: Use environment variable instead of hardcoding values 
-        consumer_key = 'YOUR CONSUMER KEY'
-        consumer_secret = 'YOUR CONSUMER SECRET'
-        access_token = 'YOUR ACCESS TOKEN'
-        access_token_secret = 'YOUR ACCESS TOKEN SECRET'
+        # consumer_key = 'YOUR CONSUMER KEY'
+        # consumer_secret = 'YOUR CONSUMER SECRET'
+        # access_token = 'YOUR ACCESS TOKEN'
+        # access_token_secret = 'YOUR ACCESS TOKEN SECRET'
+        consumer_key = 'SE2fGPkDDLdGCENDGhHVjXvQM'
+        consumer_secret = '60lIjikPSdLVeOmuXWoLOox1xwG2nT23aweejH3YBcpzlT42kj'
+        access_token = '1012363633-Q1MQWhXnTCROIhdDnmhlUytvLLN8vRNkfVLyqsu'
+        access_token_secret = 'yYtpaoGmkjB2imLj2i4hrxwRqzjTU84r3dbSB66x6Ghol'
         
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)

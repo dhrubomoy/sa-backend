@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from searched_tweets import models
+from sentiment_analysis import models
 
 class SentimentPredictionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,4 +18,6 @@ class SearchedTweetSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.SearchedTweet
         fields = ('id', 'query', 'tweets')
+
+
         

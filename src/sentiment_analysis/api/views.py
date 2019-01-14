@@ -1,9 +1,9 @@
 from rest_framework import viewsets, status, generics
 from rest_framework.views import APIView
-from searched_tweets.models import SearchedTweet, Tweet
+from sentiment_analysis.models import SearchedTweet, Tweet
 from .serializers import SearchedTweetSerializer, TweetSerializer
 from rest_framework.response import Response
-from searched_tweets.utils.twitter_analysis_utils import TwitterAnalysisUtil
+from sentiment_analysis.utils.twitter_analysis_utils import TwitterAnalysisUtil
 
 class ListSearchedTweets(viewsets.ModelViewSet):
     queryset = SearchedTweet.objects.all()

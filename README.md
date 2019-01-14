@@ -21,7 +21,7 @@
     ```
     pip install -r requirements.txt
     ```
-- Open the `/src/searched_tweets/utils/twitter_analysis_utils.py` file and replace following lines with your actual consumer key and access token for twitter api
+- Open the `/src/sentiment_analysis/utils/twitter_analysis_utils.py` file and replace following lines with your actual consumer key and access token for twitter api
     ```
     consumer_key = 'YOUR CONSUMER KEY'
     consumer_secret = 'YOUR CONSUMER SECRET'
