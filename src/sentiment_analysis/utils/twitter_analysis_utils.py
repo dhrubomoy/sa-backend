@@ -32,12 +32,13 @@ class TwitterAnalysisUtil():
 
     def get_search_result(self, query):
         all_data = []
+        num_tweets = 100         # Number of tweets, TODO: increase the number
         for tweet in tweepy.Cursor(
                 self.api.search, 
                 q=query,
                 tweet_mode='extended', 
                 lang="en"
-            ).items(20):     # Number of tweets, TODO: increase the number
+            ).items(num_tweets):
             all_data.append(tweet._json)
         return all_data
 
