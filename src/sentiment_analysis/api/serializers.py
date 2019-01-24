@@ -10,7 +10,7 @@ class TweetSerializer(serializers.ModelSerializer):
     sentiment_prediction = SentimentPredictionSerializer()
     class Meta:
         model = models.Tweet
-        fields = ('id', 'text', 'user_location', 'created_at', 'sentiment_prediction')
+        fields = ('id', 'text', 'user_location', 'created_at', 'source', 'sentiment_prediction')
 
 
 class SearchedTweetSerializer(serializers.ModelSerializer):

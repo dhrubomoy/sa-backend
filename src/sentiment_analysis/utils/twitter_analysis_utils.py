@@ -47,6 +47,20 @@ class TwitterAnalysisUtil():
         tweet = tweet.strip().lower()
         return ' '.join(word_tokenize(tweet))
 
+    def get_source(self, long_source):
+        source_devices = {
+            'Twitter for iPhone': 'iPhone',
+            'Twitter Web Client': 'Web Client',
+            'Twitter for Android': 'Android',
+            'Twitter for iPad': 'iPad',
+            'Facebook': 'Facebook',
+        }
+        for s in source_devices:
+            if s in long_source:
+                return source_devices[s]
+        return 'Other'
+
+
     def get_sentiment_prediction(self, text):
         nba_pred = self.nba.get_sentiment_prediction(text)
         pattern_pred = self.pattern.get_sentiment_prediction(text)
@@ -80,6 +94,7 @@ class TwitterAnalysisUtil():
                 text = result['full_text'],
                 user_location = result['user']['location'],
                 created_at = result['created_at'],
+                source = self.get_source(result['source']),
                 sentiment_prediction = sp
             )
             tweet.save()

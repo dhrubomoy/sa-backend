@@ -12,6 +12,7 @@ class Tweet(models.Model):
     text = models.TextField()
     user_location = models.CharField(max_length=30)
     created_at = models.CharField(max_length=20)
+    source = models.CharField(max_length=15)
     sentiment_prediction = models.OneToOneField(
         SentimentPrediction, 
         blank=True,
