@@ -1,5 +1,6 @@
+
 ## Sentiment Analysis Web App (Backend)
-### Set up
+### Set up in local computer
 - Clone the repo
     ```
     git clone https://github.com/dhrubomoy/sa-backend.git
@@ -44,3 +45,13 @@ Then download all the .hdf5 files from our google drive shared folder (`mlsa-pro
     ```
 
 The server should be up and running. Check http://127.0.0.1:8000/api/searched_tweets/
+
+### Set up frontend in local computer
+
+Follow instruction from [sa-frontend](https://github.com/dhrubomoy/sa-frontend) repository README
+
+### Deploy to AWS (EC2)
+Unfortunately deploying both backend and frontend to aws is quite tedious, and I couldn't find an easier way to make it easier.
+Follow these instructions:
+1. [Deploy backend](https://github.com/dhrubomoy/sa-backend/blob/master/deploy-aws-backend.md)
+2. [Deploy frontend](https://github.com/dhrubomoy/sa-backend/blob/master/deploy-aws-frontend.md)
