@@ -28,7 +28,11 @@
     access_token = 'YOUR ACCESS TOKEN'
     access_token_secret = 'YOUR ACCESS TOKEN SECRET'
     ```
-- Create a folder called `models` inside `src/files/`. Then download all the .hdf5 files from our google drive shared folder (`mlsa-project/models`) and save them inside the `src/files/models/` folder that you created.
+- Copy the models in `src/files/models`
+    - **Use existing model or tokenizer:** Create a folder called `models` inside `src/files/`. Download these models and save it inside the `models` folder: [rnn-glove-model-01-0.8362.hdf5](https://www.dropbox.com/s/wirgt7epmi9y8p9/rnn-glove-model-01-0.8362.hdf5?dl=0) and [rnn-word2vec-model-03-0.8425.hdf5](https://www.dropbox.com/s/yfncjn5ybx4b7i2/rnn-word2vec-model-03-0.8425.hdf5?dl=0)
+    - **If you create a new model and tokenizer:** Create a folder called `models` inside `src/files/`. After training the model, copy the saved model in `models` folder, save the tokenizer in `src/files/tokenizers` folder. Make sure that that the names of the files are reflected in `src⁩/⁨sentiment_analysis⁩/⁨utils⁩/sentiment_analysis_utils⁩/rnn_model.py` file by updating variables such as `RNN_W2V_MODEL_PATH`, `RNN_GLOVE_MODEL_PATH` etc. 
+
+Then download all the .hdf5 files from our google drive shared folder (`mlsa-project/models`) and save them inside the `src/files/models/` folder that you created.
 - Apply migrations
     ```
     cd src
