@@ -55,3 +55,5 @@ Unfortunately deploying both backend and frontend to aws is quite tedious, and I
 Follow these instructions:
 1. [Deploy backend](https://github.com/dhrubomoy/sa-backend/blob/master/deploy-aws-backend.md)
 2. [Deploy frontend](https://github.com/dhrubomoy/sa-backend/blob/master/deploy-aws-frontend.md)
+
+Once you've set up the server, everytime you stop and start the server, you must do step 6,8, and 9 mentioned in [this file](https://github.com/dhrubomoy/sa-backend/blob/master/deploy-aws-frontend.md)
