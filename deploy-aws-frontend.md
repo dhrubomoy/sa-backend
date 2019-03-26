@@ -26,6 +26,8 @@ npm install
 ```
 export const SENTIMENT_ANALYSIS_API = "http://ec2-3-17-181-123.us-east-2.compute.amazonaws.com:8000/api/";
 ```
+   - Note: You can use [vim](https://www.howtoforge.com/vim-basics) to edit the file.
+
 7. Follow [this link](https://github.com/dhrubomoy/sa-backend/blob/master/nginx-angular-ubuntu.md) and configure nginx for angular. 
 
 8. Create a bundle in production mode:
@@ -40,5 +42,3 @@ sudo cp -a dist/. /var/www/html/
 
 ### Everytime you stop and start server:
 Everytime you stop and start the EC2 instance, the public DNS changes. So you need to update the the backend url with the new DNS. Which means, you need to go through step 6,8, and 9. 
-
-
