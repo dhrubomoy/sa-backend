@@ -38,7 +38,7 @@ npm run build:prod
 ``` 
 sudo cp -a dist/. /var/www/html/
 ```
-10. Now open browser and enter the public dns of the AWS EC2 instance (e.g. "http://ec2-3-17-181-123.us-east-2.compute.amazonaws.com:8000/api/"). You should see the app running.
+10. Now open browser and enter the public dns of the AWS EC2 instance (e.g. "http://ec2-3-17-181-123.us-east-2.compute.amazonaws.com"). You should see the app running.
 
 ### Everytime you stop and start server:
 Everytime you stop and start the EC2 instance, the public DNS changes. So you need to update the the backend url with the new DNS. Which means, you need to go through step 6,8, and 9. 
